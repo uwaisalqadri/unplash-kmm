@@ -11,6 +11,7 @@ val UnplashShapes = Shapes(
 )
 
 object Dimesion {
+    val SIZE_200 = 200.dp
     val SIZE_50 = 50.dp
     val SIZE_16 = 16.dp
     val SIZE_8 = 8.dp

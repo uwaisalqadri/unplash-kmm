@@ -49,9 +49,10 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-okhttp:1.6.4")
-                implementation("io.ktor:ktor-client-android:1.6.4")
+                implementation("io.ktor:ktor-client-okhttp:2.0.0")
+                implementation("io.ktor:ktor-client-android:2.0.0")
                 implementation("io.insert-koin:koin-android:3.1.6")
+                implementation("com.github.chuckerteam.chucker:library:3.5.2")
             }
         }
 
