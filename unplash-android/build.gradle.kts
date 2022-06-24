@@ -4,7 +4,7 @@ plugins {
     kotlin("kapt")
     id("kotlin-parcelize")
     id("kotlin-android")
-    id("com.google.devtools.ksp") version "1.7.0-1.0.6"
+    id("com.google.devtools.ksp") version "1.6.20-1.0.5"
 }
 
 android {
@@ -16,11 +16,17 @@ android {
         targetSdk = 32
         versionCode = 1
         versionName = "1.0"
+        multiDexEnabled = true
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
@@ -35,7 +41,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.1"
+        kotlinCompilerExtensionVersion = "1.2.0-alpha08"
     }
 
     kotlinOptions {
@@ -61,24 +67,24 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.4.2")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
 
-    implementation("androidx.compose.ui:ui:1.1.1")
-    implementation("androidx.compose.material:material:1.1.1")
-    implementation("androidx.compose.ui:ui-tooling:1.1.1")
-    implementation("androidx.compose.foundation:foundation:1.1.1")
-    implementation("androidx.compose.foundation:foundation-layout:1.1.1")
-    implementation("androidx.compose.ui:ui-graphics:1.1.1")
+    implementation("androidx.compose.ui:ui:1.2.0-alpha08")
+    implementation("androidx.compose.material:material:1.2.0-alpha08")
+    implementation("androidx.compose.ui:ui-tooling:1.2.0-alpha08")
+    implementation("androidx.compose.foundation:foundation:1.2.0-alpha08")
+    implementation("androidx.compose.foundation:foundation-layout:1.2.0-alpha08")
+    implementation("androidx.compose.ui:ui-graphics:1.2.0-alpha08")
     implementation("androidx.activity:activity-compose:1.4.0")
-    implementation("androidx.compose.material:material-icons-extended:1.1.1")
-    implementation("androidx.compose.ui:ui-util:1.1.1")
+    implementation("androidx.compose.material:material-icons-extended:1.2.0-alpha08")
+    implementation("androidx.compose.ui:ui-util:1.2.0-alpha08")
     implementation("com.valentinilk.shimmer:compose-shimmer:1.0.2")
-    implementation("androidx.compose.runtime:runtime-livedata:1.1.1")
+    implementation("androidx.compose.runtime:runtime-livedata:1.2.0-alpha08")
 
     implementation("io.insert-koin:koin-android:3.1.6")
     implementation("io.insert-koin:koin-androidx-compose:3.1.6")
 
-    implementation("com.google.accompanist:accompanist-coil:1.0.0")
+    implementation("com.google.accompanist:accompanist-coil:0.15.0")
 
-    implementation("io.github.raamcosta.compose-destinations:core:1.0.0")
-    implementation("io.github.raamcosta.compose-destinations:animations-core:1.0.0")
-    ksp("io.github.raamcosta.compose-destinations:ksp:1.0.0")
+    implementation("io.github.raamcosta.compose-destinations:core:1.5.12-beta")
+    implementation("io.github.raamcosta.compose-destinations:animations-core:1.5.12-beta")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.5.12-beta")
 }
