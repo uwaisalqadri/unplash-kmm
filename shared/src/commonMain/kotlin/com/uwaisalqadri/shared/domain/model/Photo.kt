@@ -4,7 +4,6 @@ data class Photo(
     val blurHash: String,
     val color: String,
     val createdAt: String,
-    val currentUserCollections: List<CurrentUserCollection>,
     val description: String,
     val height: Int,
     val id: String,

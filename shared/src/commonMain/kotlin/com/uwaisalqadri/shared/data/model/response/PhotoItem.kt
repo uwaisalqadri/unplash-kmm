@@ -11,8 +11,6 @@ data class PhotoItem(
     val color: String?,
     @SerialName("created_at")
     val createdAt: String?,
-    @SerialName("current_user_collections")
-    val currentUserCollections: List<CurrentUserCollectionItem>?,
     @SerialName("description")
     val description: String?,
     @SerialName("height")

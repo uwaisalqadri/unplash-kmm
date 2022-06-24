@@ -4,7 +4,7 @@ plugins {
     id("com.android.library")
     kotlin("plugin.serialization") version "1.6.20"
     id("io.realm.kotlin") version "0.11.1"
-    id("com.rickclephas.kmp.nativecoroutines") version "0.11.3"
+    id("com.rickclephas.kmp.nativecoroutines") version "0.11.4"
     id("koin")
     id("dev.icerock.moko.kswift") version "0.5.0"
 }

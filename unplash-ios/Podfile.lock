@@ -1,16 +1,31 @@
 PODS:
+  - KMPNativeCoroutinesCombine (0.12.2):
+    - KMPNativeCoroutinesCore (= 0.12.2)
+  - KMPNativeCoroutinesCore (0.12.2)
+  - netfox (1.21.0)
   - shared (1.0)
 
 DEPENDENCIES:
+  - KMPNativeCoroutinesCombine
+  - netfox
   - shared (from `../shared`)
+
+SPEC REPOS:
+  trunk:
+    - KMPNativeCoroutinesCombine
+    - KMPNativeCoroutinesCore
+    - netfox
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
+  KMPNativeCoroutinesCombine: d4d37076a8209deadf52e49c1cd0d40a6c9f85ed
+  KMPNativeCoroutinesCore: 86877671a38880e692580fab31273fe38fa6f54a
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   shared: b157b193d942bb20c64a2d8660924698d1b88978
 
-PODFILE CHECKSUM: 6e24699ca701d83e311b802d2646e32756e8c366
+PODFILE CHECKSUM: ceaec3c25ae14cce6dd278e69699df1175160006
 
 COCOAPODS: 1.11.2

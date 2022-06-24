@@ -3,16 +3,11 @@ package com.uwaisalqadri.shared.domain.mapper
 import com.uwaisalqadri.shared.data.model.response.*
 import com.uwaisalqadri.shared.domain.model.*
 
-fun List<PhotoItem>.map(): List<Photo> {
-    return map { it.map() }
-}
-
 fun PhotoItem.map(): Photo {
     return Photo(
         blurHash = blurHash.orEmpty(),
         color = color.orEmpty(),
         createdAt = createdAt.orEmpty(),
-        currentUserCollections = currentUserCollections?.map { it.map() }.orEmpty(),
         description = description.orEmpty(),
         height = height.orZero(),
         id = id.orEmpty(),
@@ -41,18 +36,6 @@ fun UserItem.map(): User {
         totalPhotos = totalPhotos.orZero(),
         twitterUsername = twitterUsername.orEmpty(),
         username = username.orEmpty()
-    )
-}
-
-fun CurrentUserCollectionItem.map(): CurrentUserCollection {
-    return CurrentUserCollection(
-        coverPhoto = coverPhoto.orEmpty(),
-        id = id.orZero(),
-        lastCollectedAt = lastCollectedAt.orEmpty(),
-        publishedAt = publishedAt.orEmpty(),
-        title = title.orEmpty(),
-        updatedAt = updatedAt.orEmpty(),
-        user = user.orEmpty()
     )
 }
 

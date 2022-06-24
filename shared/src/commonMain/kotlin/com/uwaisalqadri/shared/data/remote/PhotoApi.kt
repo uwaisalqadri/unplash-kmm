@@ -5,7 +5,7 @@ import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
 
-class UnplashApi(private val httpClient: HttpClient): UnplashApiClient {
+class PhotoApi(private val httpClient: HttpClient): PhotoApiClient {
 
     override suspend fun getPhotos(page: Int, perPage: Int, orderBy: String): List<PhotoItem> {
         return httpClient.get("photos") {

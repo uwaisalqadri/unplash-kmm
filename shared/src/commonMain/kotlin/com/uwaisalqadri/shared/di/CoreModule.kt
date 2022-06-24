@@ -2,8 +2,9 @@ package com.uwaisalqadri.shared.di
 
 import com.uwaisalqadri.shared.Configs
 import com.uwaisalqadri.shared.data.model.response.ApiException
-import com.uwaisalqadri.shared.data.remote.UnplashApi
-import com.uwaisalqadri.shared.di.feature.unplashModule
+import com.uwaisalqadri.shared.data.remote.PhotoApi
+import com.uwaisalqadri.shared.di.feature.photoModule
+import com.uwaisalqadri.shared.ktorEngineModule
 import io.ktor.client.*
 import io.ktor.client.engine.*
 import io.ktor.client.plugins.*
@@ -25,8 +26,8 @@ fun initKoin(appDeclaration: KoinAppDeclaration = {}): KoinApplication {
         appDeclaration()
         modules(
             remoteModule,
-//            localModule,
-            unplashModule
+            ktorEngineModule(),
+            photoModule
         )
     }
 }
@@ -39,7 +40,7 @@ val localModule = module {
 }
 
 val remoteModule = module {
-    single { UnplashApi(get()) }
+    single { PhotoApi(get()) }
     single { createJson() }
     single { createHttpClient(get(), get()) }
 }
