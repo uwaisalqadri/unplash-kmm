@@ -12,8 +12,8 @@ typealias HttpClient = Ktor_client_coreHttpClient
 
 struct Injector {
 
-  static func injectViewModel() -> MainViewModel {
-    return MainViewModel(photoUseCase: injectUseCase())
+  static func injectViewModel() -> PhotoViewModel {
+    return PhotoViewModel(photoUseCase: injectUseCase())
   }
 
   static func injectUseCase() -> PhotoUseCase {

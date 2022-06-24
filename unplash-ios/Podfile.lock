@@ -3,11 +3,17 @@ PODS:
     - KMPNativeCoroutinesCore (= 0.12.2)
   - KMPNativeCoroutinesCore (0.12.2)
   - netfox (1.21.0)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
   - shared (1.0)
 
 DEPENDENCIES:
   - KMPNativeCoroutinesCombine
   - netfox
+  - SDWebImageSwiftUI
   - shared (from `../shared`)
 
 SPEC REPOS:
@@ -15,6 +21,8 @@ SPEC REPOS:
     - KMPNativeCoroutinesCombine
     - KMPNativeCoroutinesCore
     - netfox
+    - SDWebImage
+    - SDWebImageSwiftUI
 
 EXTERNAL SOURCES:
   shared:
@@ -24,8 +32,10 @@ SPEC CHECKSUMS:
   KMPNativeCoroutinesCombine: d4d37076a8209deadf52e49c1cd0d40a6c9f85ed
   KMPNativeCoroutinesCore: 86877671a38880e692580fab31273fe38fa6f54a
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   shared: b157b193d942bb20c64a2d8660924698d1b88978
 
-PODFILE CHECKSUM: ceaec3c25ae14cce6dd278e69699df1175160006
+PODFILE CHECKSUM: 33c07f0d37439f12a7fcdee7b0cb9a07decb1694
 
 COCOAPODS: 1.11.2

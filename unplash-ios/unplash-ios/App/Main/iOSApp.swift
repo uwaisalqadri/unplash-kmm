@@ -20,7 +20,7 @@ struct iOSApp: App {
 
 	var body: some Scene {
 		WindowGroup {
-      ContentView(viewModel: Injector.injectViewModel())
+      PhotoView(viewModel: Injector.injectViewModel())
 		}
 	}
 }

@@ -4,4 +4,5 @@ target 'unplash-ios' do
   pod 'shared', :path => '../shared'
   pod 'KMPNativeCoroutinesCombine'
   pod 'netfox'
+  pod 'SDWebImageSwiftUI'
 end
