@@ -9,8 +9,6 @@ val UnplashDarkColors = darkColors(
     primaryVariant = Color.Black,
     secondary = Color.White,
     error = Color.Red,
-    surface = Color.Gray,
-    onSurface = Color.Gray.copy(alpha = 0.3f),
     background = Color.DarkGray
 )
 
@@ -19,7 +17,5 @@ val UnplashLightColors = lightColors(
     primaryVariant = Color.White,
     secondary = Color.Black,
     error = Color.Red,
-    surface = Color.LightGray,
-    onSurface = Color.LightGray,
     background = Color.White
 )

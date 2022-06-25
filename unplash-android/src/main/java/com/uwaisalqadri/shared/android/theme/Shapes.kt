@@ -15,5 +15,6 @@ object Dimesion {
     val SIZE_50 = 50.dp
     val SIZE_16 = 16.dp
     val SIZE_8 = 8.dp
+    val SIZE_6 = 6.dp
     val SIZE_0 = 0.dp
 }

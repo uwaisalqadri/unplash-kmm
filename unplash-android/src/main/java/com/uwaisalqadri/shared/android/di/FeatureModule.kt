@@ -7,5 +7,4 @@ import org.koin.dsl.module
 
 val featureModule = module {
     viewModel { PhotoViewModel(get()) }
-    single { androidApplication().applicationContext }
 }

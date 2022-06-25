@@ -1,5 +1,6 @@
 package com.uwaisalqadri.shared.android.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.uwaisalqadri.shared.domain.PhotoUseCase
@@ -27,6 +28,7 @@ class PhotoViewModel(private val photoUseCase: PhotoUseCase): ViewModel() {
                 _photos.value = Result.failed(cause)
             }
             .collect { result ->
+                Log.d("getPhotos", result.toString())
                 if (result.isNotEmpty()) {
                     _photos.value = Result.success(result)
                 } else {

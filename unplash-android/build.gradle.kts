@@ -72,6 +72,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:1.2.0-alpha08")
     implementation("androidx.compose.foundation:foundation:1.2.0-alpha08")
     implementation("androidx.compose.foundation:foundation-layout:1.2.0-alpha08")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.17.0")
     implementation("androidx.compose.ui:ui-graphics:1.2.0-alpha08")
     implementation("androidx.activity:activity-compose:1.4.0")
     implementation("androidx.compose.material:material-icons-extended:1.2.0-alpha08")

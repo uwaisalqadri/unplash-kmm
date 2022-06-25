@@ -64,14 +64,6 @@ fun createHttpClient(httpClientEngine: HttpClientEngine, json: Json) = HttpClien
         json(json = json)
     }
 
-    defaultRequest {
-        url {
-            protocol = URLProtocol.HTTPS
-            host = Configs.BASE_URL
-            parameters.append("client_id", Configs.ACCESS_KEY)
-        }
-    }
-
     install(HttpTimeout) {
         this.requestTimeoutMillis = 60000
         this.connectTimeoutMillis = 60000
